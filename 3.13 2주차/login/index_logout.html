@@ -22,43 +22,75 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title> LOL 메인화면 </title>
   <style>
-    table {
-      font-size: 20pt;
-      font-family: '';
+    body {
+      background-color: #1a1a1a;
       color: white;
+      font-family: 'Arial', sans-serif;
     }
 
-    a {
-      text-decoration-line: none;
-      /*   text-decoration-line: underline; */
-      /*   text-decoration-line: overline; */
-      /*   text-decoration-line: line-through; */
-      /*   text-decoration-line: underline line-through overline; */
+    .main-title {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      margin-top: 20%;
+    }
+
+    .logout-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .logout-button a {
+      color: white;
+      font-size: 50px;
+      background-color: black;
+      border: 2px solid white;
+      border-radius: 25px;
+      /* 둥근 모서리를 위해 추가 */
+      padding: 10px 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .logout-button a:hover {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      /* hover 시 보더 색상 변경 */
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .footer h3 {
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      color: white;
+      font-family: '굴림', sans-serif;
     }
   </style>
 </head>
 
-<body style="background-color: black;" onload="init_logined();">
-
+<body onload="init_logined();">
   <div>
     <div>
-      <fr style="font-size: 50px; color: white; display: flex; justify-content: center; top: 20%;"> 로그아웃 메인화면</fr>
+      <p class="main-title">로그아웃 메인화면</p>
     </div>
-    <div style="display: flex ;justify-content: center;">
-      <button style="color: white; font-size: 50px; background-color: black; border: white; border-style: dotted;">
-        <a href="index.html">로그아웃</a>
-      </button>
+    <div class="logout-button">
+      <a href="index.html">로그아웃</a>
     </div>
   </div>
 
-  <div style=" position: absolute; bottom: 50px; left: 33%;">
-    <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family: '굴림';">라이엇 게임 회사 정보
-      2024년 X월 작성됨 </h3>
+  <div class="footer">
+    <h3>라이엇 게임 회사 정보 2024년 X월 작성됨</h3>
   </div>
-
-
-
-
 </body>
 
 </html>
