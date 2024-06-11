@@ -17,3 +17,8 @@ index.html 메인 화면 배너 디자인 수정
 0612 / 03:24
 index_logout.html css수정, 
 index.html, index_login.html 하단부 유튜브 동영상 추가 
+
+
+0612 / 04:06
+profile.html 수정, 
+index.html 다크모드, 라이트모드 추가 
