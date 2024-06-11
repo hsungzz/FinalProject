@@ -97,7 +97,71 @@
     .dropdown-item:hover {
       background-color: #495057;
     }
+
+    .table {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .table th,
+    .table td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .table thead {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .table tbody tr:hover {
+      background-color: #e9ecef;
+    }
+
+    .table-primary {
+      background-color: #007bff !important;
+      color: white !important;
+    }
+
+    .table-info {
+      background-color: #d1ecf1 !important;
+    }
+
+    .table-secondary {
+      background-color: #e2e3e5 !important;
+    }
+
+    .table-bordered {
+      border: 1px solid #dee2e6;
+    }
+
+    a img {
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    a img:hover {
+      transform: scale(1.1);
+    }
+
+    .dark-mode {
+      background-color: #fff;
+      color: black;
+    }
+
+    .dark-mode .footer {
+      color: black;
+    }
   </style>
+
 </head>
 
 <body onload="pop_up();">
@@ -115,7 +179,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">기본정보</a>
+            <a class="nav-link active" aria-current="page" href="login/profile.html">기본정보(프로필)</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="champion.html">챔피언</a>
@@ -139,8 +203,10 @@
             aria-label="Search">
           <button class="btn btn-outline-success" id="search_btn" type="submit">검색 하기</button>
           <a href="login/index_logout.html" class="btn btn-outline-success" id="login_btn">로그아웃하기</a>
-          <button class="btn btn-outline-success" type="button" onclick="location.href='join.html'">회원가입</button>
         </form>
+        <div class="toggle-button">
+          <button id="toggle-mode">라이트 모드 전환</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -186,33 +252,37 @@
       </tbody>
     </table>
   </div> -->
-  <div style="border: 1px solid white; ">
+  <div>
     <table class="table table-bordered border-primary" class="table">
       <thead>
         <tr class="table-primary">
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">인기캐릭터</th>
+          <th scope="col">1</th>
+          <th scope="col">2</th>
+          <th scope="col">3</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="table-success">
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
         <tr class="table-info">
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <th scope="row">빅토르</th>
+          <td>AP</td>
+          <td>Magic</td>
+          <td>
+            <a
+              href="https://www.google.com/search?client=safari&sca_esv=bd5de69f547e2ef3&sca_upv=1&rls=en&sxsrf=ADLYWIJ_xM0VBknu3lxvJN9dM2ed1_13_Q:1717935204559&q=%EB%B9%85%ED%86%A0%EB%A5%B4&uds=ADvngMhpsojwKe5eIOqT5IDaiLbeSL6jlsLCpTQ1cHwx8oumWQk3ivnTTiVC9JxK_M2L_DI1RxcocS4-bHv4H4DhopF3_yqz4yeMGRUsAfkrMD1FZyXjaBYh_GeBJchrCfz54qq4Kt5eHVzAAdOL2ipuphFhpFURBKyo_c8wJmSWlEfHJiUJiKq5PYrfn1Bxl7pE6WCy-mfThpk1J4dUbQ7pOCmXwDlOmnzVvh5nNmCLapBn_KHrf4KsXtZpt_X0zcALJssQu3CvLjcVXXfwUZsRzK9ym32AiVG7yCsZlBKoS2mjyNDXaWs&udm=2&prmd=ivsnmbz&sa=X&ved=2ahUKEwiIoPWsv86GAxV4mq8BHfIsC_YQtKgLegQIDxAB&biw=1345&bih=719&dpr=2#vhid=OCJSQiZK8nq_UM&vssid=mosaic">
+              <img src="image/victor.png" width="100px">
+            </a>
+          </td>
         </tr>
         <tr class="table-secondary">
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <th scope="row">바이</th>
+          <td colspan="2">AD</td>
+          <td>
+            <a
+              href="https://www.google.com/search?q=%EB%B0%94%EC%9D%B4&client=safari&sca_esv=bd5de69f547e2ef3&sca_upv=1&rls=en&udm=2&biw=1345&bih=719&sxsrf=ADLYWIIELYHzqheGxMlIVndKeTyrFWOPtA%3A1717935205943&ei=ZZxlZrygOcKBvr0PwtS4uAU&ved=0ahUKEwj85smtv86GAxXCgK8BHUIqDlcQ4dUDCA8&uact=5&oq=%EB%B0%94%EC%9D%B4&gs_lp=Egxnd3Mtd2l6LXNlcnAiBuuwlOydtDIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIyA1Q-gJYxAxwB3gAkAEDmAGAAaABwweqAQMwLji4AQPIAQD4AQGYAgmgAqoCqAIKwgIHECMYJxjqAsICDhAAGIAEGLEDGIMBGIoFwgIEECMYJ8ICBBAAGAOYAwWIBgGSBwM3LjKgB84o&sclient=gws-wiz-serp#vhid=hmhtAx3E7tEZfM&vssid=mosaic">
+              <img src="image/Vi.png" width="100px">
+            </a>
+          </td>
         </tr>
       </tbody>
     </table>

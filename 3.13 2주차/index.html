@@ -151,6 +151,15 @@
     a img:hover {
       transform: scale(1.1);
     }
+
+    .dark-mode {
+      background-color: #fff;
+      color: black;
+    }
+
+    .dark-mode .footer {
+      color: black;
+    }
   </style>
 </head>
 
@@ -169,7 +178,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">기본정보</a>
+            <a class="nav-link active" aria-current="page" href="login/profile.html">기본정보(프로필)</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="champion.html">챔피언</a>
@@ -195,6 +204,9 @@
           <a href="login/login.html" class="btn btn-outline-success" id="login_btn">로그인 하기</a>
           <button class="btn btn-outline-success" type="button" onclick="location.href='join.html'">회원가입</button>
         </form>
+        <div class="toggle-button">
+          <button id="toggle-mode">라이트 모드 전환</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -281,13 +293,15 @@
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
   </div>
+  <footer>
+    <div id="dark-footer" style="display: flex ;justify-content: center;">
+      <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family: '굴림';">라이엇 게임 회사 정보
+        2024년 X월 작성됨 </h3>
+      <button id="scrollTopBtn" title="Go to top">Top</button>
 
-  <div style="display: flex ;justify-content: center;">
-    <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family: '굴림';">라이엇 게임 회사 정보
-      2024년 X월 작성됨 </h3>
-    <button id="scrollTopBtn" title="Go to top">Top</button>
+    </div>
+  </footer>
 
-  </div>
   <script>
 
   </script>

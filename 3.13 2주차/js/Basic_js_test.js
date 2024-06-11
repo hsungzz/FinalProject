@@ -5,9 +5,14 @@ document.getElementById('scrollTopBtn').addEventListener('click', function () {
     behavior: 'smooth'
   });
 });
-function toggleDarkMode() {
+document.getElementById('toggle-mode').addEventListener('click', function () {
   document.body.classList.toggle('dark-mode');
-}
+  if (document.body.classList.contains('dark-mode')) {
+    this.textContent = '다크 모드 전환';
+  } else {
+    this.textContent = '라이트 모드 전환';
+  }
+});
 
 window.onscroll = function () { scrollFunction() };
 
